@@ -1,0 +1,29 @@
+
+name: 'dt_pipeline'
+version: '1.0.0'
+
+profile: 'dt_pipeline'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:        
+  - "target"
+  - "dbt_packages"
+
+
+# Configuring models
+
+models:
+  dt_pipeline:
+   
+    staging:
+      +materialized: view
+      snowflake_warehouse: dbt_wh
+    marts:
+     +materialized: table
+     snowflake_warehouse:
