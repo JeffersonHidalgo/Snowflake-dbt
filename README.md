@@ -1,4 +1,4 @@
-# Snowflake-dbt
+# dbt-Snowflake
 university Exercise/Practice dbt and snowflake 
 ### Jefferson Hidalgo Abreu 2021-1203
 
